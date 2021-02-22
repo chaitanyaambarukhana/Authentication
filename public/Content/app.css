@@ -1,0 +1,108 @@
+/*
+File Name: app.css
+Student Name : Chaitanya Sai Ambarukhana
+Student ID : 301150058
+Date : 14/02/2021  
+*/
+body /*Style for body of the whole web application */
+ {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a 
+{
+  color: #00b7ff;
+}
+
+.background-color/*Sets background color */
+ {
+  background-color: #f4f9f9;
+}
+
+.column/*Alignment for columns */
+ {
+  float: left;
+  width: 33.33%;
+  padding: 3px;
+}
+
+.column img /*setting height to image that appears in the column class*/
+{
+  height: 150px;
+}
+
+.captions  
+ {
+  font-size: larger;
+}
+
+.container 
+{
+  margin-top: 2%;
+  padding-top: 2%;
+}
+.h2-services 
+{
+  margin-left: 20%;
+  padding-bottom: 10%;
+}
+.segment 
+{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.about-image
+ {
+  border-radius: 100%;
+}
+.section-style
+ {
+  padding: 5%;
+  margin-top: 5%;
+}
+
+.carousel-item 
+{
+  margin-left: 5%;
+  width: auto;
+  /* height:220px; */
+  max-height: 900px;
+}
+.carousel-caption
+ {
+
+  color: black;
+}
+
+.col-image-left /*Alignment for column images to match the webiste styling */
+{
+  border-radius: 100%;
+  width: 50%;
+  margin-left: 20%;
+  margin-bottom: 20%;
+}
+
+.col-image-right /*Alignment for column images to match the webiste styling */
+{
+  border-radius: 100%;
+  width: 50%;
+  margin-right: 20%;
+  margin-bottom: 20%;
+}
+
+footer /*Alignment for footer class */
+ {
+  margin-top: 10%;
+  height: auto;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+}
+
+.section-contactSuccess
+ {
+  padding: 5%;
+  margin-top: 5%;
+  text-align: center;
+}

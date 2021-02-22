@@ -1,0 +1,77 @@
+<!-- 
+File Name: contact.ejs
+Student Name : Chaitanya Sai Ambarukhana
+Student ID : 301150058
+Date : 14/02/2021  
+
+-->
+
+<%- include partials/header.ejs %> 
+<%- include partials/navbar.ejs %>
+<section>
+  <div class="container">
+    <h3><u>My contact details</u> </h3>
+    <h5 >Name : Chaitanya Sai Ambarukhana</h5>
+    <h5>Contact me on cyz@abc.com</h5>
+
+
+  </div>
+</section>
+<div class="container">
+  <h3 class="text-left">Or Fill the following form to get in touch</h3>
+</div>
+
+
+<!--Using bootstrap formas for additional styling. Modified to website usage scenarios-->
+<section class="section-style">
+  <div class="container">
+    <form action="" method="post"><!--adding post method to forms so that we can parse through the user entered data-->
+      <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><!--type emails verifies for correct format of email-->
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Message:</label>
+      <textarea name="textarea" class="form-control" rows="5" id="comment"></textarea><!--Text area allows the users to type their inputs and submit-->
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button><!--This button submits the data to the backend-->
+  </div>
+</form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include partials/footer.ejs %>

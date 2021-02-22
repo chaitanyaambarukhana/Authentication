@@ -1,0 +1,65 @@
+<!-- 
+File Name: projects.ejs
+Student Name : Chaitanya Sai Ambarukhana
+Student ID : 301150058
+Date : 14/02/2021  
+
+-->
+<%- include partials/header.ejs %> <%- include partials/navbar.ejs %>
+
+<div class="container mt-5">
+  <!--Using bootstrap cards for my interests -->
+  <h2 class="text-center">Projects</h2>
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Web Development</h5>
+          <img
+            class="img-fluid"
+            src="/Assets/images/webdevelopment.jpg"
+            alt="web development"
+          />
+
+          <p class="card-text">
+            A full stack MERN web development project that inclusedes HTML, CSS,
+            JS ,NODE JS, EXPRESS, MONGODB, ANGULAR.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Facial Recognition</h5>
+          <img
+            class="img-fluid"
+            src="/Assets/images/project-facerecognition.jpg"
+          />
+          <p class="card-text">
+            Home security system that uses facial recognition to unlock home.
+            This involves working on several Machine Learning algorithms
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Chat Bot</h5>
+          <img
+            src="/Assets/images/chatbot.png"
+            alt="photography"
+            class="img-fluid"
+          />
+          <p class="card-text">
+            Creating a chatbot that automtically replies to customer's
+            queries.This requires background on Machine Learning
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include partials/footer.ejs %>

@@ -1,0 +1,24 @@
+<!-- 
+File Name: contact-success.ejs
+Student Name : Chaitanya Sai Ambarukhana
+Student ID : 301150058
+Date : 14/02/2021  
+
+--><!--This page is created so that the caprtured dat from the user is shown to the user and redirects automatically to the home page-->
+
+<%- include partials/header.ejs %> <%- include partials/navbar.ejs %>
+<!--Using bootstrap formas for additional styling. Modified to website usage scenarios-->
+<section class="section-contactSuccess">
+  <h2>Thank you for contacting</h2>
+  <p>Your name is <%=data.name %></p>
+  <p>Your email is <%=data.email %></p>
+  <p>Your message is <%= data.textarea %></p>
+</section>
+<!--This java script redirects us to the home page after 5 seconds -->
+<script>
+  setTimeout(function () {
+    window.location.href = "/home";
+  }, 5000);
+</script>
+
+<%- include partials/footer.ejs %>
