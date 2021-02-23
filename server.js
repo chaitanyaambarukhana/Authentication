@@ -12,7 +12,7 @@ Date : 14/02/2021
  * Module dependencies.
  */
 
-let app = require("./app");
+let app = require("./config/app");
 let debug = require("debug")("assignment1:server");
 let http = require("http");
 
