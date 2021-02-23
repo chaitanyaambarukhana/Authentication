@@ -1,0 +1,43 @@
+<!-- 
+File Name: book.ejs(home)
+Student Name : Chaitanya Sai Ambarukhana
+Student ID : 301150058
+Date : 14/02/2021  
+
+-->
+
+<%- include partials/header.ejs %> <%- include partials/navbar.ejs %>
+<br />
+<!--Welcome Message-->
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-3">
+            <h1 class="text-center"><%= title %></h1>
+            <br>
+            <table class="table table-bordered table-striped table-hover ">
+                <tr class="bg-primary">
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Author</th>
+                </tr>
+                <!--Repeatable template Row -->
+
+                    <% for(let count = 0; count < BookList.length; count++) { %>
+                        <tr >
+                            <td class="text-center "><%= BookList[count].name %></td>
+                            <td class="text-center "><%= BookList[count].author %></td>
+                            <td class="text-center "><%= BookList[count].author %></td>
+                            <td class="text-center "><%= BookList[count].author %></td>
+                            <td class="text-center "><%= BookList[count].author %></td>
+                            
+                        </tr>
+                    <% } %>
+
+            </table>
+        </div>
+    </div>
+
+
+</main>
+
+<%- include partials/footer.ejs %>
