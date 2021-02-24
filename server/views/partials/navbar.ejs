@@ -58,6 +58,18 @@
             </a>
           </li>
 
+          <% if (title == "Business contacts") { %>
+            <li class="nav-item active"><% } else { %></li>
+  
+            <li class="nav-item">
+              <% } %>
+              <a class="nav-link" href="/businessContacts"
+                ><i class="far fa-address-book"></i> Business Contacts
+              </a>
+            </li>
+
+
+
           <% if (title == "About") { %>
           <li class="nav-item active"><% } else { %></li>
 

@@ -1,1 +1,0 @@
-module.exports = {"URI":"mongodb://localhost/book_store"} //mongodb link to connecto for mongoose

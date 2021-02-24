@@ -28,7 +28,7 @@ mongoDB.once('open', ()=>{
 
 let indexRouter = require("../routes/index");
 let usersRouter = require("../routes/users");
-let booksRouter = require('../routes/book');
+let contactsRouter = require('../routes/businessContacts');
 
 let app = express();
 
@@ -40,12 +40,12 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "../public")));
-app.use(express.static(path.join(__dirname, "../node_modules")));
+app.use(express.static(path.join(__dirname, "../../public")));
+app.use(express.static(path.join(__dirname, "../../node_modules")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/book-list", booksRouter)
+app.use("/businessContacts", contactsRouter)
 
 
 // catch 404 and forward to error handler
