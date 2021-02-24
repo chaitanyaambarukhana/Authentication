@@ -16,13 +16,14 @@ module.exports.displayContactList = (req, res, next) => {
       res.render("business/list", {
         title: "Business contacts",
         ContactList: ContactList,
+        displayName:req.user ? req.user.displayName :""
       });
     }
   });
 };
 
 module.exports.displayAddPage = (req, res, next) => {
-  res.render("business/add", { title: "Add Contact" });
+  res.render("business/add", { title: "Add Contact",displayName:req.user ? req.user.displayName :"" });
 };
 
 module.exports.processAddPage = (req, res, next) => {
@@ -52,6 +53,7 @@ module.exports.displayEditPage = (req, res, next) => {
       res.render("business/edit", {
         title: "Edit Contact",
         contact: contactToEdit,
+        displayName:req.user ? req.user.displayName :""
       });
     }
   });

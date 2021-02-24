@@ -8,23 +8,23 @@ let userModel = require("../models/user");
 let user = userModel.User;
 
 module.exports.displayHomePage = (req, res, next) => {
-  res.render("home", { title: "Home" }); //route to "/"
+  res.render("home", { title: "Home",displayName:req.user?req.user.displayName:"" }); //route to "/"
 };
 
 module.exports.displayAbout = function (req, res, next) {
-  res.render("about", { title: "About me" }); //route to about page
+  res.render("about", { title: "About me",displayName:req.user?req.user.displayName:"" }); //route to about page
 };
 
 module.exports.displayProjects = function (req, res, next) {
-  res.render("projects", { title: "Projects" }); //route to projects page
+  res.render("projects", { title: "Projects",displayName:req.user?req.user.displayName:"" }); //route to projects page
 };
 
 module.exports.displayServices = function (req, res, next) {
-  res.render("services", { title: "Services" }); //route to services page
+  res.render("services", { title: "Services" ,displayName:req.user?req.user.displayName:""}); //route to services page
 };
 
 module.exports.displayContact = function (req, res, next) {
-  res.render("contact", { title: "Contact" }); //route to contact page
+  res.render("contact", { title: "Contact" ,displayName:req.user?req.user.displayName:""}); //route to contact page
 };
 
 module.exports.performContact = function (
@@ -41,6 +41,7 @@ module.exports.displayLoginPage = (req, res, next) => {
       title: "Login",
       messages: req.flash("loginMessage"),
       displayName: req.user ? req.user.displayName : "",
+      
     });
   } else {
     return res.redirect("/");
