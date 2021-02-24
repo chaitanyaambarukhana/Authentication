@@ -1,18 +1,22 @@
-/* 
-File Name: app.js
-Student Name : Chaitanya Sai Ambarukhana
-Student ID : 301150058
-Date : 14/02/2021  
-
-*/
-
-
 // IIFE -- Immediately Invoked Function Expression
 (function(){
 
     function Start()
     {
         console.log("App Started...");
+
+        let deleteButtons = document.querySelectorAll('.btn-danger');
+        
+        for(var button of deleteButtons)
+        {
+            button.addEventListener('click', (event)=>{
+                if(!confirm("Are you sure?")) 
+                {
+                    event.preventDefault();
+                    window.location.assign('/businessContacts');
+                }
+            });
+        }
     }
 
     window.addEventListener("load", Start);

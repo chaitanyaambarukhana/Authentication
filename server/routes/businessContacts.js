@@ -38,16 +38,16 @@ router.post('/add', (req,res,next)=>{
             res.end(err)
         }
         else{
-            res.redirect('/business/list')
+            res.redirect('/businessContacts')
         }
     })
 })
 /*Adding Edit page - Update operation */
 
 router.get('/edit/:id', (req,res,next)=>{
-    let id = req.pramas.id;
+    let id = req.params.id;
 
-    Book.findById(id,(err, contactToEdit)=>{
+    Contact.findById(id,(err, contactToEdit)=>{
         if(err){
             console.log(err);
             res.end(err)
@@ -63,27 +63,40 @@ router.get('/edit/:id', (req,res,next)=>{
 router.post('/edit/:id', (req,res,next)=>{
     let id = req.params.id;
 
-    let updatedcontact = Book({
-        "id":id,
+    let updatedcontact = Contact({
+        "_id":id,
         "name":req.body.name,
         "number":req.body.number,
         "email":req.body.email 
     })
-    Book.updateOne({_id:id},updatedcontact,(err)=>{
+    Contact.updateOne({_id:id},updatedcontact,(err)=>{
         if(err){
             console.log(err);
             res.end(err);
         }
         else{
-            res.redirect('/business/list')
+            res.redirect('/businessContacts')
         }
     })
 })
 
 /* Deltet page - Delete Operation*/
 
-router.get('/delete/:id', (req,res,next)=>{
-    
-})
+router.get('/delete/:id',(req, res, next) => {
+    let id = req.params.id;
+
+    Contact.remove({_id: id}, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+             // refresh the book list
+             res.redirect('/businessContacts');
+        }
+    });
+});
 
 module.exports = router;
