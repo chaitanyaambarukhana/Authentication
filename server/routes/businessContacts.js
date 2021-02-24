@@ -12,14 +12,11 @@ router.get("/", contactController.displayContactList);
 /*Adding Add page - Create operation */
 router.get("/add", contactController.displayAddPage);
 
-
 /*Post for Add page - Create Operation */
 router.post("/add", contactController.processAddPage);
 
-
 /*Adding Edit page - Update operation */
 router.get("/edit/:id", contactController.displayEditPage);
-
 
 /*Post for Edit page - Update Operation */
 
