@@ -1,6 +1,6 @@
 <%- include ../partials/header.ejs %> <%- include ../partials/navbar.ejs %>
 
-<main class="container">
+<main class="container ml-5">
   
   <%if(messages.length >0){ %>
     <div class="alert alert-danger"><%= messages %></div>
@@ -35,10 +35,10 @@
           <a href="/register">Not a User?</a>
           
         </fieldset>
-        <fieldset class="form-group text-right">
+        <fieldset class="form-group text-center">
           <input class="btn btn-success" type="submit" value="Login" />
           <a href="/">
-            <input type="button" class="btn btn-warning" value="Cancel" />
+            <input type="button" class="btn btn-danger" value="Cancel" />
           </a>
         </fieldset>
       </form>
