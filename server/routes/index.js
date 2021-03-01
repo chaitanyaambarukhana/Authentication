@@ -2,9 +2,11 @@
 File Name: index.js
 Student Name : Chaitanya Sai Ambarukhana
 Student ID : 301150058
-Date : 14/02/2021  
-
+Date : 01/03/2021  
 */
+
+//routing to the pages using the methods described in their respective controllers
+
 let express = require("express");
 
 let router = express.Router();

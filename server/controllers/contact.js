@@ -1,3 +1,11 @@
+/*
+File Name: contact.js
+Student Name : Chaitanya Sai Ambarukhana
+Student ID : 301150058
+Date : 01/03/2021  
+*/
+
+
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
@@ -6,6 +14,8 @@ let mongoose = require("mongoose");
 // create a reference to the model
 let Contact = require("../models/businessContacts");
 
+
+//method to display contact page
 module.exports.displayContactList = (req, res, next) => {
   Contact.find((err, ContactList) => {
     if (err) {
@@ -19,13 +29,15 @@ module.exports.displayContactList = (req, res, next) => {
         displayName:req.user ? req.user.displayName :""
       });
     }
-  });
+  }).sort({"name":1});
 };
 
+//method to display add page
 module.exports.displayAddPage = (req, res, next) => {
   res.render("business/add", { title: "Add Contact",displayName:req.user ? req.user.displayName :"" });
 };
 
+//method to process add page
 module.exports.processAddPage = (req, res, next) => {
   let newContact = Contact({
     name: req.body.name,
@@ -42,6 +54,7 @@ module.exports.processAddPage = (req, res, next) => {
   });
 };
 
+//method to display edit page
 module.exports.displayEditPage = (req, res, next) => {
   let id = req.params.id;
 
@@ -59,6 +72,7 @@ module.exports.displayEditPage = (req, res, next) => {
   });
 };
 
+//method to process edit page
 module.exports.processEditPage = (req, res, next) => {
   let id = req.params.id;
 
@@ -78,6 +92,7 @@ module.exports.processEditPage = (req, res, next) => {
   });
 };
 
+//method to perfom delete operation
 module.exports.performDelete = (req, res, next) => {
   let id = req.params.id;
 

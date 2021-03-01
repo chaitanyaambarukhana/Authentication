@@ -1,3 +1,12 @@
+/*
+File Name: businessContacts.js
+Student Name : Chaitanya Sai Ambarukhana
+Student ID : 301150058
+Date : 01/03/2021  
+*/
+
+//defining the routes to pages with the methods from the respective controllers
+
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");

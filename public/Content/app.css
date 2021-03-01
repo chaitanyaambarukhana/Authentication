@@ -2,7 +2,7 @@
 File Name: app.css
 Student Name : Chaitanya Sai Ambarukhana
 Student ID : 301150058
-Date : 14/02/2021  
+Date : 01/03/2021  
 */
 body /*Style for body of the whole web application */
  {
@@ -110,3 +110,7 @@ footer /*Alignment for footer class */
 .registerbutton{
   margin-left: 5%;
 }
+
+/* .table-bordered td, .table-bordered th{
+  border-color: black !important;
+} */
